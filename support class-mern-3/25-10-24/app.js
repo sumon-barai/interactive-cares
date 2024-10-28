@@ -12,6 +12,8 @@ const person = {
   10: "sssss",
 
   [abc]: "my name is sumon",
+
+  age: 450,
 };
 
 /* for (const element in person) {
