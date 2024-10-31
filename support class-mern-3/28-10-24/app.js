@@ -1,46 +1,53 @@
-/* const person = {
-  age: 45,
-  math() {
-    console.log("this is math fn");
-  },
-  edu: "MBA",
-  city: "Dhaka",
-  10: "sssss",
-  age: 450,
-  info: {
-    id: 50,
-    name: "sumon",
-  },
-};
+/* let text1 = "sea";
+let text2 = "food";
+let text3 = "foodsssssssssssssssssssssss";
+let result = text1.concat(text2, text3);
 
-const { city, edu } = person;
-console.log(city);
+console.dir(); */
+
+/* let message = "Hello World!";
+let text = message.constructor;
+
+console.log(text);
  */
 
-/* const arr = ["sumon",56,"true"]
+/* let text = "Hello world, welcome to the universe.";
+let result = text.includes(sumon());
 
-const [name,age,yes] = arr */
+console.log(result);
 
-/* var ab = "sumon";
-const abc = ["khulna", 50];
+function sumon() {
+  return "world";
+}
+ */
 
-abc[0] = "dhaka";
+/* function demo(para1, para2) {
+  if (typeof para1 === "undefined") {
+    para1 = "sumon";
+  }
 
-console.log(abc); */
+  if (typeof para2 === "undefined") {
+    para2 = "barai";
+  }
 
-/* let text = "W3Schools";
-// boxing
+  return para1 + " " + para2;
+}
 
-let character = text.at();
+// const a = demo("sumon", "barai");
+const a = demo();
+console.log(a); */
+/* 
+function demo(para1 = "sumon", para2 = "barai") {
+  return para1 + " " + para2;
+}
 
-console.log(character); */
+// const a = demo("sumon", "barai");
+const a = demo("sss", "ss");
+console.log(a);
 
-/* let text = "HELLO WORLD";
-let letter = text.charAt(-2);
+ */
 
-console.log(letter); */
+let text = "Hello world, welcome to the universe.";
+let result = text.indexOf("welcome", 20);
 
-let text = "aHELLO WORLD";
-let letter = text.charCodeAt(0);
-
-console.log(letter);
+console.log(result);
