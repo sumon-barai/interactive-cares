@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .active {
+        color: #0a4e46;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="w-full h-screen bg-no-repeat bg-center bg-cover"
+      style="
+        background-image: linear-gradient(#000000b9, #000000b9),
+          url(./assets/images/bg.jpg);
+      "
+    >
+      <div class="container mx-auto p-6">
+        <!-- todo from start -->
+        <div>
+          <form class="flex w-2/4 mx-auto gap-2" id="todoForm">
+            <input
+              type="text"
+              name="todo"
+              class="w-4/5 p-2 bg-zinc-100 rounded-lg outline-4 outline-offset-2 focus:outline-teal-400 caret-teal-500"
+            />
+            <button
+              type="submit"
+              class="bg-teal-500 p-2 rounded-lg capitalize cursor-pointer text-white active:scale-95 w-1/5"
+            >
+              add Todo
+            </button>
+          </form>
+        </div>
+        <!-- todo from end -->
+
+        <!-- todo list start -->
+
+        <div
+          class="bg-[rgba(224,242,254,0.70)] p-8 rounded-lg w-11/12 mx-auto my-4"
+        >
+          <!-- todo header start -->
+          <h2 class="text-center text-2xl capitalize">Todo list</h2>
+          <!-- todo header end -->
+          <!-- todo list start -->
+
+          <div class="h-[350px] overflow-auto relative bg-scroll" id="todoList">
+            <div class="flex flex-col gap-1">
+              <!-- <div
+                class="shadow p-4 m-2 flex gap-3 cursor-pointer hover:shadow-xl relative group/item"
+              >
+                <div>
+                  <input
+                    type="checkbox"
+                    checked="true"
+                    class="w-4 h-4 accent-teal-500 rounded-lg cursor-pointer"
+                  />
+                </div>
+                <div class="px-4">01 - Todo</div>
+                <div class="`px-4" mx-4>text</div>
+                <div
+                  class="flex gap-7 text-xl absolute right-10 invisible group-hover/item:visible"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <!-- todo list end -->
+
+          <!-- todo footer start -->
+          <div
+            class="flex justify-between items-center p-4 sticky bottom-0 left-0 w-full"
+          >
+            <div class="text-teal-900" id="countTodo"></div>
+            <div class="text-sm" id="activeBar">
+              <span
+                onclick="(
+                ()=>{
+                  const targetElement = this;
+                  sortByTodoStatus('all',this)
+                }
+              )()"
+                class="uppercase m-1 cursor-pointer active"
+              >
+                All
+              </span>
+              <span
+                onclick="(
+                  ()=>{
+                    const targetElement = this;
+                    sortByTodoStatus('complete',this)
+                  }
+                )()"
+                class="uppercase m-1 cursor-pointer"
+              >
+                complete
+              </span>
+              <span
+                onclick="(
+                ()=>{
+                  const targetElement = this;
+                  sortByTodoStatus('incomplete',this)
+                }
+              )()"
+                class="uppercase m-1 cursor-pointer"
+              >
+                Incomplete
+              </span>
+            </div>
+          </div>
+          <!-- todo footer end -->
+        </div>
+        <!-- todo list end -->
+      </div>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
