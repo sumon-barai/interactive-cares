@@ -1,0 +1,13 @@
+.root-list {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.list-data {
+  width: 600px;
+  height: 600px;
+  border: 2px solid;
+  margin: auto;
+  text-align: center;
+}
